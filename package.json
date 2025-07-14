@@ -22,11 +22,6 @@
   },
   "files": [
     "scss",
-    "bundles",
-    "fesm2022",
-    "fesm2015",
-    "esm2022",
-    "esm2015",
     "package.json",
     "README.md"
   ]
