@@ -14,15 +14,5 @@
   "dependencies": {
     "tslib": "^2.3.0"
   },
-  "sideEffects": false,
-  "exports": {
-    "./scss": {
-      "style": "./scss/index.scss"
-    }
-  },
-  "files": [
-    "scss",
-    "package.json",
-    "README.md"
-  ]
+  "sideEffects": false
 }
