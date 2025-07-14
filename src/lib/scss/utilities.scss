@@ -1,3 +1,23 @@
-@use "./colors" as *;
-@use "lib/scss/spacing/index" as *;
-@use "lib/scss/typography/index" as *;
+@use "./colors/alpha" as *;
+@use "./colors/bg" as *;
+@use "./colors/border" as *;
+@use "./colors/colors" as *;
+@use "./colors/fg" as *;
+@use "./colors/link" as *;
+@use "./colors/text" as *;
+@use "./colors/utility" as *;
+
+@use "./spacing/containers" as *;
+@use "./spacing/padding" as *;
+@use "./spacing/radius" as *;
+@use "./spacing/spacing" as *;
+@use "./spacing/width" as *;
+
+@use "./typography/font-family" as *;
+@use "./typography/font-size" as *;
+@use "./typography/font-weight" as *;
+@use "./typography/line-height" as *;
+
+
+//@use "lib/scss/spacing" as *;
+//@use "lib/scss/typography" as *;
