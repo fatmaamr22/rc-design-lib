@@ -1,14 +1,14 @@
 $font-families: (
-  DM-Sans-display: "DM Sans",
-  DM-Sans-body: "DM Sans",
-  Inter-display: "Inter",
-  Inter-body: "Inter",
-  Manrope-display: "Manrope",
-  Manrope-body: "Manrope",
-  Mulish-display: "Mulish",
-  Mulish-body: "Mulish",
-  Poppins-display: "Poppins",
-  Poppins-body: "Poppins",
+  dm-sans-display: "DM Sans",
+  dm-sans-body: "DM Sans",
+  inter-display: "Inter",
+  inter-body: "Inter",
+  manrope-display: "Manrope",
+  manrope-body: "Manrope",
+  mulish-display: "Mulish",
+  mulish-body: "Mulish",
+  poppins-display: "Poppins",
+  poppins-body: "Poppins",
 );
 
 @each $class, $value in $font-families {

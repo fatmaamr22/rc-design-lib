@@ -1,8 +1,8 @@
 $font-weights: (
-  Bold-700: 700,
-  Semibold-600: 600,
-  Medium-500: 500,
-  Regular-400: 400
+  bold-700: 700,
+  semibold-600: 600,
+  medium-500: 500,
+  regular-400: 400
 );
 
 @each $name, $value in $font-weights {
