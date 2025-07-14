@@ -1,0 +1,81 @@
+@use "lib/scss/colors/colors" as *;
+
+$border-colors: (
+  primary: (
+    light: $gray-light-300,
+    dark: $gray-light-700,
+  ),
+  secondary: (
+    light: $gray-light-200,
+    dark: $gray-light-800,
+  ),
+  tertiary: (
+    light: $gray-light-100,
+    dark: $gray-light-800,
+  ),
+  disabled: (
+    light: $gray-light-300,
+    dark: $gray-light-700,
+  ),
+  disabled-subtle: (
+    light: $gray-light-200,
+    dark: $gray-light-800,
+  ),
+  blue: (
+    light: $blue-500,
+    dark: $blue-400,
+  ),
+  blue-alt: (
+    light: $blue-600,
+    dark: $blue-500,
+  ),
+  blue-subtle: (
+    light: $blue-300,
+    dark: $blue-600,
+  ),
+  error: (
+    light: $error-500,
+    dark: $error-400,
+  ),
+  error-alt: (
+    light: $error-600,
+    dark: $error-500,
+  ),
+  error-subtle: (
+    light: $error-300,
+    dark: $error-600,
+  ),
+  warning: (
+    light: $warning-500,
+    dark: $warning-400,
+  ),
+  warning-alt: (
+    light: $warning-600,
+    dark: $warning-500,
+  ),
+  warning-subtle: (
+    light: $warning-300,
+    dark: $warning-600,
+  ),
+  success: (
+    light: $success-500,
+    dark: $success-400,
+  ),
+  success-alt: (
+    light: $success-600,
+    dark: $success-500,
+  ),
+  success-subtle: (
+    light: $success-300,
+    dark: $success-600,
+  ),
+);
+
+@each $key, $pair in $border-colors {
+  .border-#{$key} {
+    border-color: map-get($pair, light);
+  }
+  .border-#{$key}-d {
+    border-color: map-get($pair, dark);
+  }
+}

@@ -1,0 +1,97 @@
+@use "lib/scss/colors/colors" as *;
+
+$text-colors: (
+  primary: (
+    light: $gray-light-900,
+    dark: $gray-light-50,
+  ),
+  primary-on-blue: (
+    light: $bw-white,
+    dark: $gray-light-50,
+  ),
+  secondary: (
+    light: $gray-light-700,
+    dark: $gray-light-300,
+  ),
+  secondary-hover: (
+    light: $gray-light-800,
+    dark: $gray-light-200,
+  ),
+  secondary-on-blue: (
+    light: $blue-200,
+    dark: $gray-light-300,
+  ),
+  tertiary: (
+    light: $gray-light-600,
+    dark: $gray-light-400,
+  ),
+  tertiary-hover: (
+    light: $gray-light-700,
+    dark: $gray-light-300,
+  ),
+  tertiary-on-blue: (
+    light: $blue-200,
+    dark: $gray-light-400,
+  ),
+  quaternary: (
+    light: $gray-light-500,
+    dark: $gray-light-400,
+  ),
+  quaternary-on-blue: (
+    light: $blue-300,
+    dark: $gray-light-400,
+  ),
+  white: (
+    light: $bw-white,
+    dark: $bw-white,
+  ),
+  disabled: (
+    light: $gray-light-500,
+    dark: $gray-light-500,
+  ),
+  placeholder: (
+    light: $gray-light-500,
+    dark: $gray-light-400,
+  ),
+  placeholder-subtle: (
+    light: $gray-light-300,
+    dark: $gray-light-700,
+  ),
+  blue-primary: (
+    light: $blue-900,
+    dark: $gray-light-50,
+  ),
+  blue-secondary: (
+    light: $blue-700,
+    dark: $gray-light-300,
+  ),
+  blue-tertiary: (
+    light: $blue-600,
+    dark: $gray-light-400,
+  ),
+  blue-tertiary-alt: (
+    light: $blue-600,
+    dark: $gray-light-50,
+  ),
+  error-primary: (
+    light: $error-600,
+    dark: $error-400,
+  ),
+  warning-primary: (
+    light: $warning-600,
+    dark: $warning-400,
+  ),
+  success-primary: (
+    light: $success-600,
+    dark: $success-400,
+  ),
+);
+
+@each $key, $pair in $text-colors {
+  .text-#{$key} {
+    color: map-get($pair, light);
+  }
+  .text-#{$key}-d {
+    color: map-get($pair, dark);
+  }
+}

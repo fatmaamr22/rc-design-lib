@@ -1,0 +1,12 @@
+$container: (
+  sm: 640,
+  md: 768,
+  lg: 1024,
+  xl: 1280,
+);
+
+@each $key, $value in $container {
+  .container-#{$key} {
+    max-width: #{$value}px;
+  }
+}

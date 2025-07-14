@@ -1,0 +1,33 @@
+@use "lib/scss/colors/colors" as *;
+
+$link-colors: (
+  purple: (
+    $purple-700,
+    $purple-400,
+  ),
+  blue: (
+    $blue-700,
+    $blue-300,
+  ),
+  warning: (
+    $warning-700,
+    $warning-500,
+  ),
+  error: (
+    $error-700,
+    $error-500,
+  ),
+  success: (
+    $success-700,
+    $green-300,
+  ),
+);
+
+@each $name, $colors in $link-colors {
+  .link-#{$name} {
+    color: nth($colors, 1);
+  }
+  .link-#{$name}-d {
+    color: nth($colors, 2);
+  }
+}

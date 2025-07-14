@@ -1,0 +1,12 @@
+$font-weights: (
+  700-Bold: 700,
+  600-Semibold: 600,
+  500-Medium: 500,
+  400-Regular: 400
+);
+
+@each $name, $value in $font-weights {
+  .#{$name} {
+    font-weight: $value;
+  }
+}

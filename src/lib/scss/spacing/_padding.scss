@@ -1,0 +1,11 @@
+$padding: (
+  mobile: 16,
+  tab: 24,
+  desktop: 30,
+);
+
+@each $key, $value in $padding {
+  .padding-#{$key} {
+    padding: #{$value}px;
+  }
+}

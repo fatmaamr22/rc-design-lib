@@ -1,0 +1,101 @@
+@use "lib/scss/colors/colors" as *;
+
+$fg-colors: (
+  primary: (
+    light: $gray-light-900,
+    dark: $bw-white,
+  ),
+  secondary: (
+    light: $gray-light-700,
+    dark: $gray-light-300,
+  ),
+  secondary-hover: (
+    light: $gray-light-800,
+    dark: $gray-light-200,
+  ),
+  tertiary: (
+    light: $gray-light-600,
+    dark: $gray-light-400,
+  ),
+  tertiary-hover: (
+    light: $gray-light-700,
+    dark: $gray-light-300,
+  ),
+  quaternary: (
+    light: $gray-light-500,
+    dark: $gray-light-400,
+  ),
+  quaternary-hover: (
+    light: $gray-light-600,
+    dark: $gray-light-300,
+  ),
+  quinary: (
+    light: $gray-light-400,
+    dark: $gray-light-500,
+  ),
+  quinary-hover: (
+    light: $gray-light-500,
+    dark: $gray-light-400,
+  ),
+  senary: (
+    light: $gray-light-300,
+    dark: $gray-light-600,
+  ),
+  white: (
+    light: $bw-white,
+    dark: $bw-white,
+  ),
+  disabled: (
+    light: $gray-light-400,
+    dark: $gray-light-500,
+  ),
+  disabled-subtle: (
+    light: $gray-light-300,
+    dark: $gray-light-600,
+  ),
+  blue-primary: (
+    light: $blue-600,
+    dark: $blue-500,
+  ),
+  blue-primary-alt: (
+    light: $blue-600,
+    dark: $gray-light-300,
+  ),
+  blue-secondary: (
+    light: $blue-500,
+    dark: $blue-500,
+  ),
+  error-primary: (
+    light: $error-600,
+    dark: $error-500,
+  ),
+  error-secondary: (
+    light: $error-500,
+    dark: $error-400,
+  ),
+  warning-primary: (
+    light: $warning-600,
+    dark: $warning-500,
+  ),
+  warning-secondary: (
+    light: $warning-500,
+    dark: $warning-400,
+  ),
+  success-primary: (
+    light: $success-600,
+    dark: $success-500,
+  ),
+  success-secondary: (
+    light: $success-500,
+    dark: $success-400,
+  ),
+);
+
+@each $key, $pair in $fg-colors {
+  .fg-#{$key} {
+    fill: map-get($pair, light);
+  }
+  .fg-#{$key}-d {
+    fill: map-get($pair, dark);
+  }
+}

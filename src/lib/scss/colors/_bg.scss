@@ -1,0 +1,137 @@
+@use "lib/scss/colors/colors" as *;
+
+$bg-colors: (
+  primary: (
+    light: $bw-white,
+    dark: $gray-light-950,
+  ),
+  primary-alt: (
+    light: $bw-white,
+    dark: $gray-light-900,
+  ),
+  primary-hover: (
+    light: $gray-light-50,
+    dark: $gray-light-800,
+  ),
+  primary-solid: (
+    light: $gray-light-950,
+    dark: $gray-light-900,
+  ),
+  secondary: (
+    light: $gray-light-50,
+    dark: $gray-light-900,
+  ),
+  secondary-alt: (
+    light: $gray-light-50,
+    dark: $gray-light-950,
+  ),
+  secondary-hover: (
+    light: $gray-light-100,
+    dark: $gray-light-800,
+  ),
+  secondary-subtle: (
+    light: $gray-light-25,
+    dark: $gray-light-900,
+  ),
+  secondary-solid: (
+    light: $gray-light-600,
+    dark: $gray-light-600,
+  ),
+  tertiary: (
+    light: $gray-light-100,
+    dark: $gray-light-800,
+  ),
+  quaternary: (
+    light: $gray-light-200,
+    dark: $gray-light-700,
+  ),
+  active: (
+    light: $gray-light-50,
+    dark: $gray-light-800,
+  ),
+  disabled: (
+    light: $gray-light-100,
+    dark: $gray-light-800,
+  ),
+  disabled-subtle: (
+    light: $gray-light-50,
+    dark: $gray-light-900,
+  ),
+  overlay: (
+    light: $gray-light-950,
+    dark: $gray-light-800,
+  ),
+  blue-primary: (
+    light: $blue-50,
+    dark: $blue-500,
+  ),
+  blue-primary-alt: (
+    light: $blue-50,
+    dark: $gray-light-800,
+  ),
+  blue-secondary: (
+    light: $blue-100,
+    dark: $blue-600,
+  ),
+  blue-solid: (
+    light: $blue-600,
+    dark: $blue-600,
+  ),
+  blue-solid-hover: (
+    light: $blue-700,
+    dark: $blue-500,
+  ),
+  blue-section: (
+    light: $blue-800,
+    dark: $gray-light-800,
+  ),
+  blue-section-subtle: (
+    light: $blue-700,
+    dark: $gray-light-950,
+  ),
+  error-primary: (
+    light: $error-50,
+    dark: $error-500,
+  ),
+  error-secondary: (
+    light: $error-100,
+    dark: $error-600,
+  ),
+  error-solid: (
+    light: $error-600,
+    dark: $error-600,
+  ),
+  warning-primary: (
+    light: $warning-50,
+    dark: $warning-500,
+  ),
+  warning-secondary: (
+    light: $warning-100,
+    dark: $warning-600,
+  ),
+  warning-solid: (
+    light: $warning-600,
+    dark: $warning-600,
+  ),
+  success-primary: (
+    light: $success-50,
+    dark: $success-500,
+  ),
+  success-secondary: (
+    light: $success-100,
+    dark: $success-600,
+  ),
+  success-solid: (
+    light: $success-600,
+    dark: $success-600,
+  ),
+);
+
+@each $key, $pair in $bg-colors {
+  .bg-#{$key} {
+    background-color: map-get($pair, light);
+  }
+  .bg-#{$key}-d {
+    background-color: map-get($pair, dark);
+  }
+}

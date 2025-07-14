@@ -1,0 +1,549 @@
+@use "lib/scss/colors/colors" as *;
+
+$utility-colors: (
+  gray-50: (
+    $gray-light-50,
+    $gray-light-900,
+  ),
+  gray-100: (
+    $gray-light-100,
+    $gray-light-800,
+  ),
+  gray-200: (
+    $gray-light-200,
+    $gray-light-700,
+  ),
+  gray-300: (
+    $gray-light-300,
+    $gray-light-700,
+  ),
+  gray-400: (
+    $gray-light-400,
+    $gray-light-600,
+  ),
+  gray-500: (
+    $gray-light-500,
+    $gray-light-500,
+  ),
+  gray-600: (
+    $gray-light-600,
+    $gray-light-400,
+  ),
+  gray-700: (
+    $gray-light-700,
+    $gray-light-300,
+  ),
+  gray-800: (
+    $gray-light-800,
+    $gray-light-200,
+  ),
+  gray-900: (
+    $gray-light-900,
+    $gray-light-100,
+  ),
+  blue-50: (
+    $blue-50,
+    $blue-950,
+  ),
+  blue-50-alt: (
+    $blue-50,
+    $gray-light-900,
+  ),
+  blue-100: (
+    $blue-100,
+    $blue-900,
+  ),
+  blue-100-alt: (
+    $blue-100,
+    $gray-light-800,
+  ),
+  blue-200: (
+    $blue-200,
+    $blue-800,
+  ),
+  blue-200-alt: (
+    $blue-200,
+    $gray-light-700,
+  ),
+  blue-300: (
+    $blue-300,
+    $blue-700,
+  ),
+  blue-300-alt: (
+    $blue-300,
+    $gray-light-700,
+  ),
+  blue-400: (
+    $blue-400,
+    $blue-600,
+  ),
+  blue-400-alt: (
+    $blue-400,
+    $gray-light-600,
+  ),
+  blue-500: (
+    $blue-500,
+    $blue-500,
+  ),
+  blue-500-alt: (
+    $blue-500,
+    $gray-light-500,
+  ),
+  blue-600: (
+    $blue-600,
+    $blue-400,
+  ),
+  blue-600-alt: (
+    $blue-600,
+    $gray-light-400,
+  ),
+  blue-700: (
+    $blue-700,
+    $blue-300,
+  ),
+  blue-700-alt: (
+    $blue-700,
+    $gray-light-300,
+  ),
+  blue-800: (
+    $blue-800,
+    $blue-200,
+  ),
+  blue-800-alt: (
+    $blue-800,
+    $gray-light-200,
+  ),
+  blue-900: (
+    $blue-900,
+    $blue-100,
+  ),
+  blue-900-alt: (
+    $blue-900,
+    $gray-light-100,
+  ),
+  error-50: (
+    $error-50,
+    $error-950,
+  ),
+  error-100: (
+    $error-100,
+    $error-900,
+  ),
+  error-200: (
+    $error-200,
+    $error-800,
+  ),
+  error-300: (
+    $error-300,
+    $error-700,
+  ),
+  error-400: (
+    $error-400,
+    $error-600,
+  ),
+  error-500: (
+    $error-500,
+    $error-500,
+  ),
+  error-600: (
+    $error-600,
+    $error-400,
+  ),
+  error-700: (
+    $error-700,
+    $error-300,
+  ),
+  warning-50: (
+    $warning-50,
+    $warning-950,
+  ),
+  warning-100: (
+    $warning-100,
+    $warning-900,
+  ),
+  warning-200: (
+    $warning-200,
+    $warning-800,
+  ),
+  warning-300: (
+    $warning-300,
+    $warning-700,
+  ),
+  warning-400: (
+    $warning-400,
+    $warning-600,
+  ),
+  warning-500: (
+    $warning-500,
+    $warning-500,
+  ),
+  warning-600: (
+    $warning-600,
+    $warning-400,
+  ),
+  warning-700: (
+    $warning-700,
+    $warning-300,
+  ),
+  success-50: (
+    $success-50,
+    $success-950,
+  ),
+  success-100: (
+    $success-100,
+    $success-900,
+  ),
+  success-200: (
+    $success-200,
+    $success-800,
+  ),
+  success-300: (
+    $success-300,
+    $success-700,
+  ),
+  success-400: (
+    $success-400,
+    $success-600,
+  ),
+  success-500: (
+    $success-500,
+    $success-500,
+  ),
+  success-600: (
+    $success-600,
+    $success-400,
+  ),
+  success-700: (
+    $success-700,
+    $success-300,
+  ),
+  brand-50: (
+    $brand-50,
+    $brand-950,
+  ),
+  brand-100: (
+    $brand-100,
+    $brand-900,
+  ),
+  brand-200: (
+    $brand-200,
+    $brand-800,
+  ),
+  brand-300: (
+    $brand-300,
+    $brand-700,
+  ),
+  brand-400: (
+    $brand-400,
+    $brand-600,
+  ),
+  brand-500: (
+    $brand-500,
+    $brand-500,
+  ),
+  brand-600: (
+    $brand-600,
+    $brand-400,
+  ),
+  brand-700: (
+    $brand-700,
+    $brand-300,
+  ),
+  gray-blue-50: (
+    $gray-blue-50,
+    $gray-blue-950,
+  ),
+  gray-blue-100: (
+    $gray-blue-100,
+    $gray-blue-900,
+  ),
+  gray-blue-200: (
+    $gray-blue-200,
+    $gray-blue-800,
+  ),
+  gray-blue-300: (
+    $gray-blue-300,
+    $gray-blue-700,
+  ),
+  gray-blue-400: (
+    $gray-blue-400,
+    $gray-blue-600,
+  ),
+  gray-blue-500: (
+    $gray-blue-500,
+    $gray-blue-500,
+  ),
+  gray-blue-600: (
+    $gray-blue-600,
+    $gray-blue-400,
+  ),
+  gray-blue-700: (
+    $gray-blue-700,
+    $gray-blue-300,
+  ),
+  blue-light-50: (
+    $blue-light-50,
+    $blue-light-950,
+  ),
+  blue-light-100: (
+    $blue-light-100,
+    $blue-light-900,
+  ),
+  blue-light-200: (
+    $blue-light-200,
+    $blue-light-800,
+  ),
+  blue-light-300: (
+    $blue-light-300,
+    $blue-light-700,
+  ),
+  blue-light-400: (
+    $blue-light-400,
+    $blue-light-600,
+  ),
+  blue-light-500: (
+    $blue-light-500,
+    $blue-light-500,
+  ),
+  blue-light-600: (
+    $blue-light-600,
+    $blue-light-400,
+  ),
+  blue-light-700: (
+    $blue-light-700,
+    $blue-light-300,
+  ),
+  blue-dark-50: (
+    $blue-dark-50,
+    $blue-dark-950,
+  ),
+  blue-dark-100: (
+    $blue-dark-100,
+    $blue-dark-900,
+  ),
+  blue-dark-200: (
+    $blue-dark-200,
+    $blue-dark-800,
+  ),
+  blue-dark-300: (
+    $blue-dark-300,
+    $blue-dark-700,
+  ),
+  blue-dark-400: (
+    $blue-dark-400,
+    $blue-dark-600,
+  ),
+  blue-dark-500: (
+    $blue-dark-500,
+    $blue-dark-500,
+  ),
+  blue-dark-600: (
+    $blue-dark-600,
+    $blue-dark-400,
+  ),
+  blue-dark-700: (
+    $blue-dark-700,
+    $blue-dark-300,
+  ),
+  indigo-50: (
+    $indigo-50,
+    $indigo-950,
+  ),
+  indigo-100: (
+    $indigo-100,
+    $indigo-900,
+  ),
+  indigo-200: (
+    $indigo-200,
+    $indigo-800,
+  ),
+  indigo-300: (
+    $indigo-300,
+    $indigo-700,
+  ),
+  indigo-400: (
+    $indigo-400,
+    $indigo-600,
+  ),
+  indigo-500: (
+    $indigo-500,
+    $indigo-500,
+  ),
+  indigo-600: (
+    $indigo-600,
+    $indigo-400,
+  ),
+  indigo-700: (
+    $indigo-700,
+    $indigo-300,
+  ),
+  purple-50: (
+    $purple-50,
+    $purple-950,
+  ),
+  purple-100: (
+    $purple-100,
+    $purple-900,
+  ),
+  purple-200: (
+    $purple-200,
+    $purple-800,
+  ),
+  purple-300: (
+    $purple-300,
+    $purple-700,
+  ),
+  purple-400: (
+    $purple-400,
+    $purple-600,
+  ),
+  purple-500: (
+    $purple-500,
+    $purple-500,
+  ),
+  purple-600: (
+    $purple-600,
+    $purple-400,
+  ),
+  purple-700: (
+    $purple-700,
+    $purple-300,
+  ),
+  fuchsia-50: (
+    $fuchsia-50,
+    $fuchsia-950,
+  ),
+  fuchsia-100: (
+    $fuchsia-100,
+    $fuchsia-900,
+  ),
+  fuchsia-200: (
+    $fuchsia-200,
+    $fuchsia-800,
+  ),
+  fuchsia-300: (
+    $fuchsia-300,
+    $fuchsia-700,
+  ),
+  fuchsia-400: (
+    $fuchsia-400,
+    $fuchsia-600,
+  ),
+  fuchsia-500: (
+    $fuchsia-500,
+    $fuchsia-500,
+  ),
+  fuchsia-600: (
+    $fuchsia-600,
+    $fuchsia-400,
+  ),
+  fuchsia-700: (
+    $fuchsia-700,
+    $fuchsia-300,
+  ),
+  pink-50: (
+    $pink-50,
+    $pink-950,
+  ),
+  pink-100: (
+    $pink-100,
+    $pink-900,
+  ),
+  pink-200: (
+    $pink-200,
+    $pink-800,
+  ),
+  pink-300: (
+    $pink-300,
+    $pink-700,
+  ),
+  pink-400: (
+    $pink-400,
+    $pink-600,
+  ),
+  pink-500: (
+    $pink-500,
+    $pink-500,
+  ),
+  pink-600: (
+    $pink-600,
+    $pink-400,
+  ),
+  pink-700: (
+    $pink-700,
+    $pink-300,
+  ),
+  orange-dark-50: (
+    $orange-dark-50,
+    $orange-dark-950,
+  ),
+  orange-dark-100: (
+    $orange-dark-100,
+    $orange-dark-900,
+  ),
+  orange-dark-200: (
+    $orange-dark-200,
+    $orange-dark-800,
+  ),
+  orange-dark-300: (
+    $orange-dark-300,
+    $orange-dark-700,
+  ),
+  orange-dark-400: (
+    $orange-dark-400,
+    $orange-dark-600,
+  ),
+  orange-dark-500: (
+    $orange-dark-500,
+    $orange-dark-500,
+  ),
+  orange-dark-600: (
+    $orange-dark-600,
+    $orange-dark-400,
+  ),
+  orange-dark-700: (
+    $orange-dark-700,
+    $orange-dark-300,
+  ),
+  orange-50: (
+    $orange-50,
+    $orange-950,
+  ),
+  orange-100: (
+    $orange-100,
+    $orange-900,
+  ),
+  orange-200: (
+    $orange-dark-200,
+    $orange-800,
+  ),
+  orange-300: (
+    $orange-300,
+    $orange-700,
+  ),
+  orange-400: (
+    $orange-400,
+    $orange-600,
+  ),
+  orange-500: (
+    $orange-500,
+    $orange-500,
+  ),
+  orange-600: (
+    $orange-600,
+    $orange-400,
+  ),
+  orange-700: (
+    $orange-700,
+    $orange-300,
+  ),
+);
+
+@each $name, $colors in $utility-colors {
+  .utility-#{$name} {
+    background-color: nth($colors, 1);
+  }
+  .utility-#{$name}-d {
+    background-color: nth($colors, 2);
+  }
+}
