@@ -10,7 +10,7 @@ This guide walks you through the steps required to install and use the `emaratec
 Use `npm` to install the library directly from the Git repository:
 
 ```bash
-npm install git+https://github.com/fatmaamr22/rc-design-lib.git#master
+  npm install git+https://github.com/<org>/<repo-name>.git#master
 ```
 
 ---
