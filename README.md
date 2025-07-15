@@ -1,5 +1,5 @@
 
-# 📦 How to Consume the `emaratech-ui-css` Angular Library
+# 📦 How to Use the `emaratech-ui-css` Angular Library
 
 This guide walks you through the steps required to install and use the `emaratech-ui-css` library in your Angular application — including how to access SCSS tokens and apply them in your components.
 
@@ -66,9 +66,8 @@ To use SCSS variables like colors, typography, and spacing in any component SCSS
 Then you can directly use variables like:
 
 ```scss
-.box3 {
+.example {
   background-color: $violet-400;
-  padding: $spacing-md;
 }
 ```
 
@@ -83,21 +82,6 @@ You can also use predefined utility classes from the library directly in HTML:
   Primary Bold 20px Text
 </p>
 ```
-
----
-
-## 🎯 6. Example – Using Library Variables in Component SCSS
-
-Here’s a full example of how to style an element using SCSS tokens from the library:
-
-```scss
-@use "emaratech-ui-css" as *;
-
-.box3 {
-  background-color: $violet-400;
-}
-```
-
 
 ---
 
