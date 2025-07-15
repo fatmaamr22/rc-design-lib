@@ -1,63 +1,112 @@
-# RcTokenLib
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.0.
+# 📦 How to Consume the `emaratech-ui-css` Angular Library
 
-## Code scaffolding
+This guide walks you through the steps required to install and use the `emaratech-ui-css` library in your Angular application — including how to access SCSS tokens and apply them in your components.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+---
 
-```bash
-ng generate component component-name
-```
+## ✅ 1. Install the Library
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Use `npm` to install the library directly from the Git repository:
 
 ```bash
-ng generate --help
+npm install git+https://github.com/fatmaamr22/rc-design-lib.git#master
 ```
 
-## Building
+---
 
-To build the library, run:
+## 🛠 2. Configure `angular.json` to Enable SCSS Token Imports
 
-```bash
-ng build rc-token-lib
+To allow your project to resolve SCSS paths from the library, you need to update `angular.json`:
+
+```json
+{
+  "projects": {
+    "your-app-name": {
+      "architect": {
+        "build": {
+          "options": {
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "node_modules/rc-token-lib/src/lib/scss/"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
 ```
 
-This command will compile your project, and the build artifacts will be placed in the `dist/` directory.
 
-### Publishing the Library
+---
 
-Once the project is built, you can publish your library by following these steps:
+## 🎨 3. Import the SCSS Library Once in `styles.scss`
 
-1. Navigate to the `dist` directory:
-   ```bash
-   cd dist/rc-token-lib
-   ```
+To expose all foundational tokens and styles globally:
 
-2. Run the `npm publish` command to publish your library to the npm registry:
-   ```bash
-   npm publish
-   ```
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
+```scss
+// src/styles.scss
+@forward "emaratech-ui-css";
 ```
 
-## Running end-to-end tests
+This ensures all tokens and design foundations are available across the app.
 
-For end-to-end (e2e) testing, run:
+---
 
-```bash
-ng e2e
+## 🧩 4. Use Library Tokens in Component Styles
+
+To use SCSS variables like colors, typography, and spacing in any component SCSS, import the library like this:
+
+```scss
+@use "emaratech-ui-css" as *;
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Then you can directly use variables like:
 
-## Additional Resources
+```scss
+.box3 {
+  background-color: $violet-400;
+  padding: $spacing-md;
+}
+```
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+---
+
+## 🧪 5. Example – Using Library Utility Classes
+
+You can also use predefined utility classes from the library directly in HTML:
+
+```html
+<p class="text-blue-primary text-xl-20px bold-700">
+  Primary Bold 20px Text
+</p>
+```
+
+---
+
+## 🎯 6. Example – Using Library Variables in Component SCSS
+
+Here’s a full example of how to style an element using SCSS tokens from the library:
+
+```scss
+@use "emaratech-ui-css" as *;
+
+.box3 {
+  background-color: $violet-400;
+}
+```
+
+
+---
+
+## ⚠️ Final Precaution
+
+After completing all setup steps:
+
+- 🔄 **Rebuild your Angular project** to ensure SCSS tokens and styles are correctly applied.
+- ▶️ **Serve the project again using** `ng serve` or your preferred method.
+- 👀 **Observe the changes** to verify the library styles and tokens are working as expected.
+
+> This helps avoid issues caused by cached builds or incomplete style injection.
