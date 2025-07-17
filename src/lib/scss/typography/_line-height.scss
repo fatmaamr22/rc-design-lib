@@ -13,7 +13,7 @@ $line-heights: (
 );
 
 @each $class, $value in $line-heights {
-  .#{$class} {
+  .lh-#{$class} {
     line-height: #{$value};
   }
 }

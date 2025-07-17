@@ -10,7 +10,6 @@ $width: (
   4xl: 1440,
   5xl: 1600,
   6xl: 1920,
-  paragraph-max-width: 720,
 );
 
 @each $key, $value in $width {
@@ -18,3 +17,8 @@ $width: (
     width: #{$value}px;
   }
 }
+
+.paragraph-max-width {
+  max-width: 720px;
+}
+
